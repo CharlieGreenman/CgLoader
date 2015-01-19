@@ -1,0 +1,118 @@
+@import "compass/reset";
+@import "compass/css3";
+
+
+/*********************
+    General Styling
+*********************/
+body {
+  background-color: #CC1814;
+  overflow: hidden;
+}
+
+//Colors
+$codePenGray: #252527;
+$codersYellow: #00ff00;
+
+
+#compContainer{
+  @include transition(3s);
+  position: absolute;
+  margin: auto;
+  top:    35%; right: 0;
+  bottom: 35%; left:  0;
+  width: 15%; height: 30%;
+}
+
+
+//placeholder prefixes for various venders
+::-webkit-input-placeholder {
+  font-size: 1.5rem;
+  color: red;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-size: 1.5rem;
+   color: red;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-size: 1.5rem;
+  color: red;
+}
+
+:-ms-input-placeholder {
+  font-size: 1.5rem;
+  color: red;
+}
+
+/*********************
+    Text Area divs
+*********************/
+#txt{
+  width: 100%;
+  height: 100%;
+  background: black;
+  font-size: .55rem;
+  color: $codersYellow;
+  box-sizing:border-box;
+  font-family: 'Quicksand', sans-serif;
+  @include box-sizing(border-box);
+  display: inline-block;
+  padding: 5%;
+  @include transition(3s);
+}
+
+/*********************
+    CSS Drawings
+*********************/
+//div for computer monitor
+#comp {
+  @include box-sizing(border-box);
+  @include transition(3s);
+  height: 50%;
+  width: 100%;
+  color: $codersYellow;
+  font-family: monospace;
+  border: 3px solid $codersYellow;
+
+}
+
+//Computer stand
+#standBar{
+  position: relative;
+  width: 5%;
+  height: 15%;
+  margin-left: 47.5%;
+  background: $codersYellow;
+}
+//second div for the computer stand
+#standBase{
+  position: relative;
+  width: 80%;
+  height: 2.5%;
+  margin: 0 0 0 10%;
+  background: $codersYellow;
+}
+
+//div for keyboard, or what is supposed to look like a keyboard
+#keyboard{
+    content: "";
+    display: block;
+    position: absolute;
+    margin-top: 14%;
+    width: 82%;
+    height: 2.5%;
+    background: $codersYellow;
+  }
+
+//div for mouse, or what is supposed to look like a mouse
+#mouse{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: 14% 0 0 92%;
+    height: 2.5%;
+    width: 8%;
+    background: $codersYellow;
+  }
